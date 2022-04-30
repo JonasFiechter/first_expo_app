@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView, Platform, StatusBar } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, Platform, StatusBar, Image } from 'react-native';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>ASODOPAKSPODKAPOSDKAPSDPOKPO</Text>
+      <Text style={styles.textBigger}>FIRST APP TEST</Text>
+      <Text style={styles.text}>App da Morgana</Text>
     </SafeAreaView>
   );
 }
@@ -18,5 +19,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
+  },
+  textBigger: {
+    flex: 1,
+    color: '#15d',
   }
 });
