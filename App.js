@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView, Platform, StatusBar, Image } from 'react-native';
+import { my_colors } from './src/utils/colors.js'
 
 export default function App() {
   return (
@@ -15,13 +16,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Platform.OS === 'ios' ? 0:StatusBar.currentHeight,
-    backgroundColor: '#000',
+    backgroundColor: my_colors.dark_blue,
   },
   text: {
-    color: '#fff',
+    color: my_colors.white,
   },
   textBigger: {
     flex: 1,
-    color: '#15d',
+    color: my_colors.white,
   }
 });
