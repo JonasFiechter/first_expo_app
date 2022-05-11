@@ -9,20 +9,21 @@ export default function App() {
   const [currentSubject, setCurrentSubject] = useState(null);
   return (
     <SafeAreaView style={styles.container}>
-      {!currentSubject ? <Focus/> : 
+      {!currentSubject ? <Focus addSubject={setCurrentSubject}/> : 
       <View>
-          <Text>
-            I am going to render the timer
+          <Text style={styles.text}>
+            I am going to render the timer for {currentSubject}
           </Text>
         </View>}
     </SafeAreaView>
   );
 }
-console.log(StatusBar.currentHeight)
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Platform.OS === 'ios' ? 0:StatusBar.currentHeight,
-    backgroundColor: my_colors.dark_blue,}
+    backgroundColor: my_colors.dark_blue,},
+  text: {
+    color: my_colors.white},
 });
