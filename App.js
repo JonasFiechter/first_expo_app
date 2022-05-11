@@ -16,13 +16,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Platform.OS === 'ios' ? 0:StatusBar.currentHeight,
-    backgroundColor: my_colors.dark_blue,
-  },
-  text: {
-    color: my_colors.white,
-  },
-  textBigger: {
-    flex: 1,
-    color: my_colors.white,
-  }
+    backgroundColor: my_colors.dark_blue,}
 });
