@@ -15,14 +15,12 @@ export default function App() {
   const [currentSubject, setCurrentSubject] = useState(null);
   return (
     <SafeAreaView style={styles.container}>
-      {!currentSubject ? <Focus addSubject={setCurrentSubject}/> : 
-      <View>
+      {!currentSubject ? <Focus addSubject={setCurrentSubject}/> :
           <Timer
             focusSubject={currentSubject}
-            onTimerEnd={()=> {}}
-            clearSubject={()=> {}}
-          />
-        </View>}
+            onTimerEnd={() => {}}
+            clearSubject={() => {}}
+          />}
     </SafeAreaView>
   );
 }
