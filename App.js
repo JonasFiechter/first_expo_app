@@ -8,8 +8,7 @@ import { StyleSheet,
         View } from 'react-native';
 import { my_colors } from './src/utils/colors.js';
 import { Focus } from './src/features/focus.js';
-import Timer from './src/components/timer.js'
-
+import { Timer } from './src/components/timer.js'
 
 
 export default function App() {
