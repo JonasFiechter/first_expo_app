@@ -1,4 +1,4 @@
 export const my_colors = {
-    white: '#fff',
+    white: '#FFF',
     dark_blue: '#252250'
 }

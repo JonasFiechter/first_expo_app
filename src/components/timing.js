@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet} from 'react-native';
+import { borderColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import { RoundedButton } from './roundedButton';
 
 export const Timing = ({ onChangeTime }) => {
@@ -35,6 +36,6 @@ const styles = StyleSheet.create({
     timingButton: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
 })

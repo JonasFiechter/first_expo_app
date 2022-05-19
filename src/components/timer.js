@@ -7,13 +7,15 @@ import { spacing } from '../utils/sizes.js';
 import { ProgressBar } from 'react-native-paper';
 import { Timing } from './timing';
 
-export const Timer = ({focusSubject}) => {
+export const Timer = ({focusSubject, clearSubject}) => {
     const [isStarted, setIsStarted] = useState(false);
     const [progress, setProgress] = useState(1);
     const [minutes, setMinutes] = useState(0.1);
-    const PATTERN = [
-        1 * 1000
-    ];
+    const PATTERN = [1 * 1000];
+    const onEnd = function() {
+        Vibration.vibrate(PATTERN)
+    }
+    
     return (
         <View style={styles.countdownContainer}>
             <View style={styles.countdown}>
@@ -21,9 +23,7 @@ export const Timer = ({focusSubject}) => {
                     minutes={minutes}
                     isPaused={!isStarted} 
                     onProgress={setProgress} 
-                    onEnd={() => {
-                        Vibration.vibrate(PATTERN)
-                    }}/>
+                    onEnd={onEnd}/>
                 <View style={styles.focusSubject}>
                     <Text style={styles.title}>Focusing on:</Text>
                     <Text style={styles.task}>{focusSubject}</Text>
@@ -52,8 +52,8 @@ export const Timer = ({focusSubject}) => {
                 <RoundedButton
                     title='reset'
                     size={50}
-                    onPress={()=>{}}
-                />
+                    onPress={clearSubject}>
+                </RoundedButton>
             </View>
         </View>
     );
@@ -92,7 +92,7 @@ const styles = StyleSheet.create ({
         textAlign: 'center',
     },
     progressBar: {
-        color: my_colors.dark_blue,
+        color: my_colors.white,
         paddingTop: spacing.sm,
     },
 })
