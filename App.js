@@ -13,6 +13,7 @@ import { FocusHistory } from './src/features/focusHistory.js';
 
 
 export default function App() {
+  console.log('working fine')
   const [currentSubject, setCurrentSubject] = useState();
   const [history, setHistory] = useState([])
   return (
